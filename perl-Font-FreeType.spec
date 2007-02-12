@@ -8,7 +8,7 @@
 %define		pdir	Font
 %define		pnam	FreeType
 Summary:	Font::FreeType - read font files and render glyphs from Perl using FreeType2
-Summary(pl):	Font::FreeType - odczyt plików fontów oraz rendering znaków graficznych za pomoc± FreeType2
+Summary(pl.UTF-8):   Font::FreeType - odczyt plikÃ³w fontÃ³w oraz rendering znakÃ³w graficznych za pomocÄ… FreeType2
 Name:		perl-Font-FreeType
 Version:	0.03
 Release:	0.1
@@ -30,13 +30,13 @@ high-quality hinting and antialiasing, extract metrics information,
 and extract the outlines of characters in scalable formats like
 TrueType.
 
-%description -l pl
-Modu³ ten umo¿liwia programom perlowym odczyt informacji z plików
-fontów w wygodny sposób. Ca³y dostêp do fontów odbywa sie poprzez
-bibliotekê FreeType2, która wspiera wiele formatów. Umo¿liwia
-renderowanie obrazów znaków, wysokiej jako¶ci hinting i antyaliasing,
-pobieranie informacji o metryce oraz pobieranie zarysów znaków dla
-formatów skalowalnych, takich jak TrueType.
+%description -l pl.UTF-8
+ModuÅ‚ ten umoÅ¼liwia programom perlowym odczyt informacji z plikÃ³w
+fontÃ³w w wygodny sposÃ³b. CaÅ‚y dostÄ™p do fontÃ³w odbywa sie poprzez
+bibliotekÄ™ FreeType2, ktÃ³ra wspiera wiele formatÃ³w. UmoÅ¼liwia
+renderowanie obrazÃ³w znakÃ³w, wysokiej jakoÅ›ci hinting i antyaliasing,
+pobieranie informacji o metryce oraz pobieranie zarysÃ³w znakÃ³w dla
+formatÃ³w skalowalnych, takich jak TrueType.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
