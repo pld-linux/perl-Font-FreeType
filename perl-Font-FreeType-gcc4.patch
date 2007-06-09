@@ -1,0 +1,12 @@
+diff -urN Font-FreeType-0.03.org/FreeType.xs Font-FreeType-0.03/FreeType.xs
+--- Font-FreeType-0.03.org/FreeType.xs	2004-09-11 22:50:44.000000000 +0200
++++ Font-FreeType-0.03/FreeType.xs	2007-06-10 00:44:09.873808974 +0200
+@@ -805,7 +805,7 @@
+             char_code = FT_Get_First_Char(face, &glyph_idx);
+             while (glyph_idx) {
+                 if (glyph_idx == glyph->index) {
+-                    RETVAL = newSVuv((UV) glyph->char_code = char_code);
++                    RETVAL = newSVuv(glyph->char_code = char_code);
+                     break;
+                 }
+                 char_code = FT_Get_Next_Char(face, char_code, &glyph_idx);
