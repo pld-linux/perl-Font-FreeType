@@ -1,8 +1,8 @@
 #
-# TODO: check while tests fail (freetype expert needed)
+# TODO: check why tests fail (freetype expert needed)
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_with	tests	# do perform "make test" (fails with recent freetype versions)
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Font
@@ -65,10 +65,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %dir %{perl_vendorarch}/Font
-%{perl_vendorarch}/Font/*.pm
+%{perl_vendorarch}/Font/FreeType.pm
 %{perl_vendorarch}/Font/FreeType
 %dir %{perl_vendorarch}/auto/Font
 %dir %{perl_vendorarch}/auto/Font/FreeType
-%attr(755,root,root) %{perl_vendorarch}/auto/Font/FreeType/*.so
-%{perl_vendorarch}/auto/Font/FreeType/*.bs
-%{_mandir}/man3/*
+%attr(755,root,root) %{perl_vendorarch}/auto/Font/FreeType/FreeType.so
+%{perl_vendorarch}/auto/Font/FreeType/FreeType.bs
+%{_mandir}/man3/Font::FreeType.3pm*
