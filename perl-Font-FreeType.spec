@@ -70,5 +70,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Font
 %dir %{perl_vendorarch}/auto/Font/FreeType
 %attr(755,root,root) %{perl_vendorarch}/auto/Font/FreeType/FreeType.so
-%{perl_vendorarch}/auto/Font/FreeType/FreeType.bs
 %{_mandir}/man3/Font::FreeType*.3pm*
