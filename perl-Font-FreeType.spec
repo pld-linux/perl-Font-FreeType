@@ -4,7 +4,6 @@
 # Conditional build:
 %bcond_with	tests	# do perform "make test" (fails with recent freetype versions)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Font
 %define		pnam	FreeType
 Summary:	Font::FreeType - read font files and render glyphs from Perl using FreeType2
