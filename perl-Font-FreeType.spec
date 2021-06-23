@@ -1,26 +1,30 @@
 #
-# TODO: check why tests fail (freetype expert needed)
-#
 # Conditional build:
-%bcond_with	tests	# do perform "make test" (fails with recent freetype versions)
+%bcond_without	tests	# unit tests
 #
 %define		pdir	Font
 %define		pnam	FreeType
 Summary:	Font::FreeType - read font files and render glyphs from Perl using FreeType2
 Summary(pl.UTF-8):	Font::FreeType - odczyt plików fontów oraz rendering znaków graficznych za pomocą FreeType2
 Name:		perl-Font-FreeType
-Version:	0.03
-Release:	17
+Version:	0.16
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Font/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	47b9483c92f1b2df0bbb5258a6a596b2
-Patch0:		%{name}-gcc4.patch
-URL:		http://search.cpan.org/dist/Font-FreeType/
+# Source0-md5:	01b17b1844c7369084288bb6c70b9021
+URL:		https://metacpan.org/dist/Font-FreeType
 BuildRequires:	freetype-devel >= 2
+BuildRequires:	perl-Devel-CheckLib
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.64
+BuildRequires:	perl-File-Which
+%if %{with tests}
+BuildRequires:	perl-Test-Warnings
+%endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -41,7 +45,6 @@ formatów skalowalnych, takich jak TrueType.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
