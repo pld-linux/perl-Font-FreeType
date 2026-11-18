@@ -7,13 +7,13 @@
 Summary:	Font::FreeType - read font files and render glyphs from Perl using FreeType2
 Summary(pl.UTF-8):	Font::FreeType - odczyt plików fontów oraz rendering znaków graficznych za pomocą FreeType2
 Name:		perl-Font-FreeType
-Version:	0.16
-Release:	7
+Version:	0.18
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Font/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	01b17b1844c7369084288bb6c70b9021
+Source0:	https://www.cpan.org/authors/id/D/DM/DMOL/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	c9bab5627b90ca227ec5c60bf2f1ba38
 URL:		https://metacpan.org/dist/Font-FreeType
 BuildRequires:	freetype-devel >= 2
 BuildRequires:	perl-Devel-CheckLib
